@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Profile card component</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        position: absolute;
+        font-size: 11px;
+        text-align: center;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2.5rem 0;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <article class="card">
+        <img
+          src="images/bg-pattern-card.svg"
+          alt="card pattern background"
+          class="card__pattern"
+        />
+
+        <div class="card__info">
+          <img
+            src="images/image-victor.jpg"
+            alt="profile picture of victor"
+            class="card__info--profile"
+          />
+          <h1 class="card__info--name">
+            Victor Crest <span class="card__info--age">26</span>
+          </h1>
+          <p class="card__info--location">London</p>
+        </div>
+        <div class="spliter"></div>
+        <div class="card__stats">
+          <div class="card__stat">
+            <h1 class="card__stat--number">80K</h1>
+            <div class="card__stat--text">Followers</div>
+          </div>
+          <div class="card__stat">
+            <h1 class="card__stat--number">803K</h1>
+            <div class="card__stat--text">Likes</div>
+          </div>
+          <div class="card__stat">
+            <h1 class="card__stat--number">1.4K</h1>
+            <div class="card__stat--text">Photos</div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

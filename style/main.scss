@@ -1,0 +1,228 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+// COLORS
+$clr-dark-cyan: hsl(185, 75%, 39%);
+$clr-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$clr-dark-grayish-blue: hsl(227, 10%, 46%);
+$clr-dark-gray: hsl(0, 0%, 59%);
+$clr-white: #fff;
+
+// name and stats: 18px fw700 $clr-very-dark-desaturated-blue
+// other text: 12px fw400 $clr-dark-grayish-blue
+// body bg: $clr-dark-cyan
+// card: bg $clr-dark-gray
+//
+//
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  min-width: 90vw;
+  min-height: 80vh;
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $clr-dark-cyan;
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 20vh right 48vw, top 40vh left 45vw;
+  box-shadow: 0 0 3rem rgba(#000, 0.3);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 22.5rem;
+  background: $clr-white;
+  text-align: center;
+  position: relative;
+
+  box-shadow: 0 0 2rem rgba(#000, 0.25);
+
+  &__pattern {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__info--name,
+  &__stat--number {
+    font-size: 1.125rem;
+    color: $clr-very-dark-desaturated-blue;
+  }
+
+  &__info--age,
+  &__info--location,
+  &__stat--text {
+    font-weight: 400;
+    color: $clr-dark-grayish-blue;
+  }
+
+  &__stat--text {
+    margin-top: 0.5rem;
+    font-size: 0.625rem;
+    letter-spacing: 2px;
+  }
+  hr {
+    background-color: $clr-dark-gray;
+  }
+
+  .spliter {
+    border-top: 1px solid rgba($clr-dark-gray, 0.1);
+  }
+
+  &__info {
+    padding-top: 5rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &--profile {
+      border-radius: 50%;
+      height: 6.5rem;
+      width: 6.5rem;
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 4px solid $clr-white;
+      object-fit: contain;
+    }
+
+    &--age {
+      margin-left: 0.5rem;
+    }
+    &--location {
+      margin-top: 1rem;
+    }
+  }
+  &__stats {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+// 850px
+@media only screen and (max-width: 53.125rem) {
+  .container {
+    box-shadow: unset;
+    min-width: 100%;
+    min-height: 100%;
+    background-position: bottom 40vh right 58vw, top 40vh left 45vw;
+  }
+}
+
+// 380px
+@media only screen and (max-width: 23.75rem) {
+  .card {
+    margin: 0 2rem;
+
+    &__pattern {
+      width: 125vw;
+    }
+    &__info--profile {
+      top: 43%;
+    }
+    &__stats {
+      padding: 1rem;
+    }
+  }
+}
+
+// 320px
+@media only screen and (max-width: 20rem) {
+  html {
+    font-size: 0.875rem;
+  }
+  .card {
+    &__info {
+      &--profile {
+        top: 40%;
+      }
+    }
+
+    &__stats {
+      padding: 1rem;
+    }
+    &__stat {
+      margin: 1rem;
+    }
+  }
+}
+
+// 300px
+@media only screen and (max-width: 18.75rem) {
+  .card {
+    &__pattern {
+      height: 70vw;
+    }
+    &__info {
+      &--profile {
+        top: 37%;
+      }
+    }
+    &__stats {
+      flex-direction: column;
+    }
+  }
+}
+// 270px
+@media only screen and (max-width: 16.875rem) {
+  .card {
+    &__info {
+      &--profile {
+        top: 35%;
+      }
+    }
+  }
+}
+
+// 230px
+@media only screen and (max-width: 14.375rem) {
+  .card {
+    &__info {
+      &--profile {
+        top: 31%;
+      }
+    }
+    &__stats {
+      padding: 1rem 0;
+    }
+  }
+}
+
+// 205px
+@media only screen and (max-width: 12.8125rem) {
+  .card {
+    &__info {
+      &--profile {
+        height: 6rem;
+        width: 6rem;
+        top: 28%;
+      }
+      &--age {
+        margin-left: 0;
+      }
+    }
+  }
+}
