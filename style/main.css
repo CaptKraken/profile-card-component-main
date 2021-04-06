@@ -9,12 +9,12 @@
 }
 
 html {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   font-family: "Kumbh Sans", sans-serif;
-  height: 100%;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,9 +137,11 @@ body {
   .container {
     -webkit-box-shadow: unset;
             box-shadow: unset;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     background-position: bottom 40vh right 58vw, top 40vh left 45vw;
+    margin: 0;
+    padding: 2rem 0;
   }
 }
 
