@@ -30,6 +30,7 @@ body {
   min-width: 90vw;
   min-height: 80vh;
   margin: 5rem;
+  padding: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,7 +142,6 @@ body {
     min-height: 100vh;
     background-position: bottom 40vh right 58vw, top 40vh left 45vw;
     margin: 0;
-    padding: 2rem 0;
   }
 }
 
