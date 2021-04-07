@@ -12,17 +12,19 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | 3-column preview card component</title>
-    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Frontend Mentor | Profile card component</title>
+    <link rel="stylesheet" href="style/main.css" />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
-        margin-top: 5rem;
-        color: black;
+        position: absolute;
         font-size: 11px;
         text-align: center;
-        position: absolute;
         bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2.5rem 0;
+        z-index: -1;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -30,42 +32,48 @@
     </style>
   </head>
   <body>
-    <div class="container-container">
-      <section class="container flex">
-        <div class="card card--sedan">
-          <img src="./images/icon-sedans.svg" alt="" class="card__icon" />
-          <h1 class="card__title">Sedans</h1>
-          <p class="card__description">
-            Choose a sedan for its affordability and excellent fuel economy.
-            Ideal for cruising in the city or on your next road trip.
-          </p>
-          <a href="#" class="card__btn">Learn More</a>
+    <div class="container">
+      <article class="card">
+        <img
+          src="images/bg-pattern-card.svg"
+          alt="card pattern background"
+          class="card__pattern"
+        />
+
+        <div class="card__info">
+          <img
+            src="images/image-victor.jpg"
+            alt="profile picture of victor"
+            class="card__info--profile"
+          />
+          <h2 class="card__info--name">
+            Victor Crest <span class="card__info--age">26</span>
+          </h2>
+          <p class="card__info--location">London</p>
         </div>
-        <div class="card card--suv">
-          <img src="./images/icon-suvs.svg" alt="" class="card__icon" />
-          <h1 class="card__title">SUVs</h1>
-          <p class="card__description">
-            Take an SUV for its spacious interior, power, and versatility.
-            Perfect for your next family vacation and off-road adventures.
-          </p>
-          <a href="#" class="card__btn">Learn More</a>
+        <div class="spliter"></div>
+        <div class="card__stats">
+          <div class="card__stat">
+            <h2 class="card__stat--number">80K</h2>
+            <div class="card__stat--text">Followers</div>
+          </div>
+          <div class="card__stat">
+            <h2 class="card__stat--number">803K</h2>
+            <div class="card__stat--text">Likes</div>
+          </div>
+          <div class="card__stat">
+            <h2 class="card__stat--number">1.4K</h2>
+            <div class="card__stat--text">Photos</div>
+          </div>
         </div>
-        <div class="card card--luxury">
-          <img src="./images/icon-luxury.svg" alt="" class="card__icon" />
-          <h1 class="card__title">Luxury</h1>
-          <p class="card__description">
-            Cruise in the best car brands without the bloated prices. Enjoy the
-            enhanced comfort of a luxury rental and arrive in style.
-          </p>
-          <a href="#" class="card__btn">Learn More</a>
-        </div>
-      </section>
+      </article>
     </div>
+
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="https://github.com/CaptKraken">CaptKraken</a>.
+      >. Coded by <a href="https://github.com/CaptKraken/">CaptKraken</a>.
     </div>
   </body>
 </html>
